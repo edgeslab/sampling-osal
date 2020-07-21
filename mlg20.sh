@@ -15,17 +15,6 @@ if [[ $# -gt 1 ]] ; then
     budget=$2
 fi
 
-# generate datasets
-sh gen_csv.sh citeseer
-sh gen_csv.sh cora
-
-# create directories
-mkdir -p logs       # -> stores experiment logs
-mkdir -p results    # -> stores all the generated results
-mkdir -p plots      # -> stores all the generated plots
-mkdir -p cache      # -> stores cached results for each run
-
-
 echo "MLG-20 experiments starting for [trials: "$trials", budget: "$budget"]"
 
 STARTTIME=$(date +%s)

@@ -21,6 +21,17 @@
     pip install -r requirements.txt
 ```
 
+## Preparing data
+
+In order to download the datasets and process it for experiments, first run the following script once:
+
+```
+    sh prep.sh
+```
+
+Then follow the instruction inside the script for further data processing
+
+
 ## Usage
 
 To reproduce the results in MLG paper, run the following: 
