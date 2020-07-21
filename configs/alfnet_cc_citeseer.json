@@ -1,0 +1,11 @@
+{
+    "seed"          : 2162019,
+    "dataset"       : "citeseer",
+    "classifier"    : "cc",
+    "num_trials"    : 5,
+    "al_budget"     : 224,
+    "al_batch"      : 8,
+    "budget_step"   : 32,
+    "scikit_clf"    : "sklearn.linear_model.LogisticRegression",
+    "algos"         : ["alfnet"]
+}

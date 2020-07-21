@@ -1,0 +1,7 @@
+{
+    "root_dir"      :   "data",
+    "node_file"     :   "nodes.csv",
+    "edge_file"     :   "edges.csv",
+    "feature_file"  :   "features.csv",
+    "cache_dir"     :   "cache"
+}

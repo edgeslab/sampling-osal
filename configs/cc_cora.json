@@ -1,0 +1,11 @@
+{
+    "seed"          : 2162019,
+    "dataset"       : "cora",
+    "classifier"    : "cc",
+    "num_trials"    : 5,
+    "al_budget"     : 224,
+    "al_batch"      : 8,
+    "budget_step"   : 32,
+    "scikit_clf"    : "sklearn.linear_model.LogisticRegression",
+    "algos"         : ["rs", "kms", "ns_dc_h", "ns_ct_h", "es_rs", "fp", "wls_2", "wls_3", "ss", "ffs", "ms"]
+}
