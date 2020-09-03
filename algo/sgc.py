@@ -58,7 +58,7 @@ class SGC(GNN):
         class_support = dict(Counter(self.df_targets.loc[L]["label"]))
         classes = sorted(self.data.class_labels)
         counts = [class_support[c] if c in class_support else 0 for c in classes ]
-        weights = np.array(counts) / np.sum(counts)
+        weights = np.sum(counts) / np.array(counts)
         weighted_loss = self.weighted_categorical_crossentropy(weights)
 
         model = Model(inputs=x_inp, outputs=predictions)
