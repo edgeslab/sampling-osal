@@ -73,8 +73,9 @@ def main():
     ranking = ranking.rename(columns={'index' : 'Sampling'})
     ranking = ranking.sort_values(by=['Final Rank'])
     ranking = ranking[['Sampling', 'Rank Mean', 'Rank Std']]
-
-    print(ranking.to_latex(index=False, label='table:rank',caption="Rankings of sampling methods based on Micro-F1 scores."))
+    ranking['Avg. Rank'] = ranking[['Rank Mean', 'Rank Std']].apply(lambda x: "$%0.2f \pm %0.2f$" % (x['Rank Mean'], x['Rank Std']), axis=1)
+    ranking = ranking[['Sampling', 'Avg. Rank']]
+    print(ranking.to_latex(index=False, escape=False, label='table:rank',caption="Rankings of sampling methods based on Micro-F1 scores."))
 
     # pdb.set_trace()
 
